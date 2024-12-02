@@ -42,18 +42,18 @@ def mob_logout(req):
     logout(req)
     return redirect(mob_login)
 
-def add_product(req):
+def add_prod(req):
     if 'mob' in req.session:
         if req.method=='POST':
-            product_id=req.POST['product_id']
-            product_name=req.POST['product_name']
-            product_price=req.POST['product_price']
+            product_id=req.POST['mob_id']
+            product_name=req.POST['mob_name']
+            product_price=req.POST['mob_price']
             ofr_price=req.POST['ofr_price']
             img=req.FILES['img']
             
-            data=Product.objects.create(product_id=product_id,name=product_name,price=product_price,offer_price=ofr_price,img=img)
+            data=Product.objects.create(pro_id=product_id,name=product_name,price=product_price,offer_price=ofr_price,img=img)
             data.save()
-            return redirect(add_product)
+            return redirect(add_prod)
         else:
             return render(req,'admin/add_product.html')
     else:

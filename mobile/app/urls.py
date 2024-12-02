@@ -6,7 +6,7 @@ urlpatterns=[
 
     #admin
     path('home_ad',views.home_ad),
-    path('add_product',views.add_product),
+    path('add_product',views.add_prod),
     path('edit/<pid>',views.edit_product),
     path('delete/<pid>',views.delete_product),
 
