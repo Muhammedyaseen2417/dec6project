@@ -86,7 +86,7 @@ def delete_product(req,pid):
     data=Product.objects.get(pk=pid)
     url=data.img.url
     og_path=url.split('/')[-1]
-    os.remove('media/'+og_path)
+    os.remove('static/images/'+og_path)
     data.delete()
     return redirect(home_ad)
 
