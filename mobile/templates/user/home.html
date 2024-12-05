@@ -34,13 +34,15 @@
                 <a class="nav-link" href="view_cart">Cart</a>
               </li>
               <li class="nav-item">
+                <a class="nav-link" href="view_cart">Bookings</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link" href="mob_logout">Log out</a>
               </li>    
             </ul>
           </div>
         </div>
       </nav>
-    <h2>Home</h2>
     <div class="container">
       <div class="row">
         {% for product in data %}
@@ -50,9 +52,8 @@
                     <img class="card-img-top" src="{{product.img.url}}" alt="Card image" style="height: 400px; width: 100%; ">
                     <div class="card-body">
                       <h4 class="card-title">{{product.name}}</h4>
-                      <p class="card-text">{{product.dis}}</p>
-                      <s><p class="card-text">₹{{product.price}}</p></s>
-                      <h4 class="card-title">₹{{product.ofr_price}}</h4>
+                      <p class="card-text">₹{{product.price}}</p>
+                      <h4 class="card-title">₹{{product.offer_price}}</h4>
                     </div>
                   </div>
             </a>
